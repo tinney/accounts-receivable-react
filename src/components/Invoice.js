@@ -1,10 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state, { match }) => {
     return {
-        invoice: state.invoices.find((invoice) => invoice.id === state.activeInvoiceId)
-    }
+        invoice: state.invoices.find((invoice) => invoice.id === match.params.id)
+    };
 }
 
 function Invoice(props) {
