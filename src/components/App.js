@@ -8,8 +8,12 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <InvoiceList />
-      <Invoice invoiceId="1" />
+      <div class="sidebar">
+        <InvoiceList />
+      </div>
+      <div class="main">
+        <Invoice invoiceId="1" />
+      </div>
     </div>
   );
 }

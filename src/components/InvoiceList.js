@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import addInvoice from '../actions';
+import { showInvoice } from '../actions';
 
 const mapStateToProps = (state) => {
     return {
@@ -10,8 +10,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        addInvoice: () => {
-            dispatch(addInvoice({id: 4, client: 'New Client'}))
+        showInvoice: (invoiceId) => {
+            dispatch(showInvoice(invoiceId))
         }
     }
 }
