@@ -1,8 +1,9 @@
-import React from 'react';
-import './App.css';
-import Header from './Header';
-import Invoice from './Invoice';
-import InvoiceList from './ConnectedInvoiceList';
+import React from "react";
+import "./App.css";
+import Header from "./Header";
+import Invoice from "./Invoice";
+import InvoicesForm from "./InvoicesForm";
+import InvoiceList from "./InvoiceList";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 function App() {
@@ -10,10 +11,11 @@ function App() {
     <Router>
       <div className="App">
         <Header />
-        <div class="sidebar">
+        <div className="sidebar">
           <InvoiceList />
         </div>
-        <div class="main">
+        <div className="main">
+          <Route path="/invoices/add" component={InvoicesForm} />
           <Route path="/invoices/:id" component={Invoice} />
         </div>
       </div>
