@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { showInvoice } from "../actions";
+import { Link } from "react-router-dom";
 
 const mapStateToProps = state => {
   return {
@@ -9,11 +9,7 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchToProps = dispatch => {
-  return {
-    showInvoice: invoiceId => {
-      dispatch(showInvoice(invoiceId));
-    }
-  };
+  return { };
 };
 
 function InvoiceList(props) {
@@ -21,8 +17,8 @@ function InvoiceList(props) {
     <ul className="InvoiceList">
       {props.invoices.map(i => {
         return (
-          <li key={i.id} onClick={() => props.showInvoice(i.id)}>
-            {i.client}
+          <li>
+            <Link to={`/invoices/${i.id}`}>{i.client}</Link>
           </li>
         );
       })}

@@ -9,7 +9,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 function App() {
   return (
     <Router>
-      <div className="App">
+      <div className="App container">
         <Header />
         <div className="sidebar">
           <InvoiceList />

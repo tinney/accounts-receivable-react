@@ -25,4 +25,5 @@ ReactDOM.render(
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
 
-store.dispatch(addInvoice({id: "1", client: 'Test Double', }))
+store.dispatch(addInvoice({id: "1", client: 'Test Double', }));
+store.dispatch(addInvoice({id: "2", client: 'Github', }));
