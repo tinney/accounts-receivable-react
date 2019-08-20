@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+import InvoiceSection from "./InvoiceSection";
 
 const mapStateToProps = (state, { match }) => {
   return {
@@ -25,49 +26,9 @@ function Invoice(props) {
           {props.invoice.notes}
         </div>
         <br />
-        <h5>Products</h5>
-        <table class="table">
-          <thead>
-            <tr>
-              <th scope="col">Name</th>
-              <th scope="col">Description</th>
-              <th scope="col">Unit Price</th>
-              <th scope="col">Quantity</th>
-              <th scope="col">Subtotal</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Anti-virus Software</td>
-              <td>Anti-virus software subscription</td>
-              <td>$200</td>
-              <td>1</td>
-              <td>$200</td>
-            </tr>
-          </tbody>
-        </table>
+        <InvoiceSection title="Products" items={props.invoice.products} />
         <br />
-        <h5>Services</h5>
-        <table class="table">
-          <thead>
-            <tr>
-              <th scope="col">Name</th>
-              <th scope="col">Description</th>
-              <th scope="col">Unit Price</th>
-              <th scope="col">Quantity</th>
-              <th scope="col">Subtotal</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Anti-virus Software</td>
-              <td>Anti-virus software subscription</td>
-              <td>$200</td>
-              <td>1</td>
-              <td>$200</td>
-            </tr>
-          </tbody>
-        </table>
+        <InvoiceSection title="Services" items={props.invoice.services} />
         <div>
           <strong>Total: </strong>
           $1,000,000
