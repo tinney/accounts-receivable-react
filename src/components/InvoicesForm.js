@@ -22,25 +22,23 @@ function InvoicesForm({ addInvoice }) {
 
   return (
     <form onSubmit={onSubmitHandler}>
-      <label>
-        Client:
-        <input
-          type="text"
-          name="client"
-          value={client}
-          onChange={e => setClient(e.target.value)}
-        />
-      </label>
-      <label>
-        Purchase Order Number:
+      <div class="form-group">
+        <label>Client: </label>
+        <select name="client" value={client} onChange={e => setClient(e.target.value)} class="form-control">
+          <option value="CircleCi">CircleCi</option>
+          <option value="New Relic">New Relic</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Purchase Order Number: </label>
         <input
           type="text"
           name="ponumber"
           value={poNumber}
           onChange={e => setPoNumber(e.target.value)}
         />
-      </label>
-      <button>Save</button>
+      </div>
+      <button type="submit" class="btn btn-primary">Save</button>
     </form>
   );
 }

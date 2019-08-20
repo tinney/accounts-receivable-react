@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const mapStateToProps = state => {
   return {
@@ -14,11 +14,11 @@ const mapDispatchToProps = dispatch => {
 
 function InvoiceList(props) {
   return (
-    <ul className="InvoiceList">
+    <ul className="InvoiceList nav nav-pills flex-column">
       {props.invoices.map(i => {
         return (
-          <li>
-            <Link to={`/invoices/${i.id}`}>{i.client}</Link>
+          <li class="nav-item">
+            <NavLink to={`/invoices/${i.id}`} className="nav-link">{i.client}</NavLink>
           </li>
         );
       })}

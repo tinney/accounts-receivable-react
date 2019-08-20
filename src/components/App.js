@@ -15,8 +15,8 @@ function App() {
           <InvoiceList />
         </div>
         <div className="main">
-          <Route path="/invoices/add" component={InvoicesForm} />
           <Route path="/invoices/:id" component={Invoice} />
+          <Route path="/invoices/add" component={InvoicesForm} />
         </div>
       </div>
     </Router>
