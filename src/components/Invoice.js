@@ -26,7 +26,7 @@ function Invoice(props) {
           {props.invoice.notes}
         </div>
         <br />
-        <InvoiceSection title="Products" items={props.invoice.products} />
+        <InvoiceSection title="Projects" items={props.invoice.projects} />
         <br />
         <InvoiceSection title="Services" items={props.invoice.services} />
         <div>

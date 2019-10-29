@@ -8,17 +8,13 @@ const mapStateToProps = state => {
   };
 };
 
-const mapDispatchToProps = dispatch => {
-  return { };
-};
-
 function InvoiceList(props) {
   return (
     <ul className="InvoiceList nav nav-pills flex-column">
-      {props.invoices.map(i => {
+      {props.invoices.map(invoice => {
         return (
-          <li class="nav-item">
-            <NavLink to={`/invoices/${i.id}`} className="nav-link">{i.client}</NavLink>
+          <li className="nav-item" key={invoice.id}>
+            <NavLink to={`/invoices/${invoice.id}`} className="nav-link">{invoice.client}</NavLink>
           </li>
         );
       })}
@@ -27,6 +23,5 @@ function InvoiceList(props) {
 }
 
 export default connect(
-  mapStateToProps,
-  mapDispatchToProps
+  mapStateToProps
 )(InvoiceList);

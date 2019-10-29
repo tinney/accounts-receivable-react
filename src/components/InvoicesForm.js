@@ -1,4 +1,4 @@
-import React, { useState, useReducer, useEffect } from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { addInvoice } from "../actions";
@@ -22,14 +22,14 @@ function InvoicesForm({ addInvoice }) {
 
   return (
     <form onSubmit={onSubmitHandler}>
-      <div class="form-group">
+      <div className="form-group">
         <label>Client: </label>
         <select name="client" value={client} onChange={e => setClient(e.target.value)} class="form-control">
           <option value="CircleCi">CircleCi</option>
           <option value="New Relic">New Relic</option>
         </select>
       </div>
-      <div class="form-group">
+      <div className="form-group">
         <label>Purchase Order Number: </label>
         <input
           type="text"
@@ -38,7 +38,7 @@ function InvoicesForm({ addInvoice }) {
           onChange={e => setPoNumber(e.target.value)}
         />
       </div>
-      <button type="submit" class="btn btn-primary">Save</button>
+      <button type="submit" className="btn btn-primary">Save</button>
     </form>
   );
 }

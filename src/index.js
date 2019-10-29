@@ -37,7 +37,7 @@ store.dispatch(addInvoice({
   ],
   services: [
     { name: 'Software Development', description: 'Refactor of addresses module.', discount_percent: null, price_cents: 15000, quantity: 8},
-    { name: 'Software Development', description: 'Exract micro-service.', discount_percent: null, price_cents: 15000, quantity: 12},
+    { name: 'Software Development', description: 'Extract micro-service.', discount_percent: null, price_cents: 15000, quantity: 12},
     { name: 'Software Development', description: 'Deploy new staging environment.', discount_percent: null, price_cents: 15000, quantity: 9},
   ],
 }));
@@ -54,7 +54,7 @@ store.dispatch(addInvoice({
   ],
   services: [
     { name: 'Software Development', description: 'Refactor of node modules.', discount_percent: null, price_cents: 15000, quantity: 8},
-    { name: 'Software Development', description: 'Exract service layer.', discount_percent: null, price_cents: 15000, quantity: 12},
+    { name: 'Software Development', description: 'Extract service layer.', discount_percent: null, price_cents: 15000, quantity: 12},
     { name: 'Software Development', description: 'Deploy product environments.', discount_percent: null, price_cents: 15000, quantity: 9},
   ],
 }));

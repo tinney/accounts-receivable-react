@@ -1,8 +1,7 @@
 import React from "react";
-import ReactDom from "react-dom";
 import configureStore from "redux-mock-store";
 import { Provider } from "react-redux";
-import { render, fireEvent, cleanup } from "@testing-library/react";
+import { render, cleanup } from "@testing-library/react";
 import "jest-dom/extend-expect";
 
 import InvoiceList from "../InvoiceList";

@@ -6,7 +6,7 @@ function InvoiceSection(props) {
     return (
       <>
         <h5>{title}</h5>
-        <table class="table">
+        <table className="table">
           <thead>
             <tr>
               <th scope="col">Name</th>
@@ -17,8 +17,8 @@ function InvoiceSection(props) {
             </tr>
           </thead>
           <tbody>
-            {items.map(item => (
-              <tr>
+            {items.map((item, index) => (
+              <tr key={index}>
                 <td>{item.name}</td>
                 <td>{item.description}</td>
                 <td>${item.price_cents / 100}</td>
